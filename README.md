@@ -21,13 +21,12 @@ Letakkan file `.gguf` berikut di folder `models/` (tidak ikut di-commit ke Git k
 | `LFM2.5-1.2B-Instruct-Q4_0` | [`LiquidAI/LFM2.5-1.2B-Instruct-GGUF`](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) | ~664 MB | Ringan tanpa reasoning panjang |
 
 ## Cara Setup
-1. Unduh release Windows Vulkan dari [`ggml-org/llama.cpp`](https://github.com/ggml-org/llama.cpp/releases) (misalnya `llama-b12521-bin-win-vulkan-x64.zip`) lalu ekstrak ke folder `bin/` sehingga ada `bin/llama-server.exe`.
-2. Unduh model `.gguf` pilihan Anda ke folder `models/`.
-3. Jalankan server dengan klik dua kali `start-api.bat` atau lewat PowerShell:
+1. Jalankan `setup.bat` (atau `.\setup.ps1` di PowerShell) untuk otomatis mengunduh `llama-server.exe` (Vulkan `b12521`) ke `bin/` dan ke-7 model `.gguf` ke `models/`.
+2. Jalankan server dengan klik dua kali `start-api.bat` atau lewat PowerShell:
    ```powershell
    powershell -NoProfile -ExecutionPolicy Bypass -File .\start-api.ps1
    ```
-4. Cek daftar model aktif di `http://127.0.0.1:8080/v1/models`.
+3. Cek daftar model aktif di `http://127.0.0.1:8080/v1/models`.
 
 ## Menghubungkan ke 9Router
 1. Jalankan `9router` dan buka dashboard (`http://localhost:20128`).
