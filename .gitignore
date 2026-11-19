@@ -1,0 +1,7 @@
+# Model weights & binaries (too large for GitHub)
+models/*.gguf
+bin/
+*.exe
+*.dll
+*.zip
+*.log
